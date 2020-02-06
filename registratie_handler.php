@@ -3,10 +3,10 @@
 <?php
 $email = $username = "";
 $age = 0;
-if (!empty($_GET["email"]) && !empty($_GET["username"]) && !empty($_GET["age"])) {
-    $email = $_GET["email"];
-    $username = $_GET["username"];
-    $age = $_GET["age"];
+if (!empty($_POST["email"]) && !empty($_POST["username"]) && !empty($_POST["age"])) {
+    $email = $_POST["email"];
+    $username = $_POST["username"];
+    $age = $_POST["age"];
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo("Jouw username is ".$username."<br>");
         echo("Jouw email is ".$email."<br>");
